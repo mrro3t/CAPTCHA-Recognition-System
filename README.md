@@ -3,7 +3,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrro3t/CAPTCHA-Recognition-System/blob/main/train_on_Colab.ipynb)
 
 
-A deep learning-based system to detect and decode CAPTCHA images using a CNN model. A deep learning-based CAPTCHA Recognition system built with convolutional neural networks (CNN).  It automatically detects and decodes CAPTCHA images into readable text with high accuracy.
+A deep learning-based system to detect CAPTCHA images using a CNN model. A deep learning-based CAPTCHA Recognition system built with convolutional neural networks (CNN).  It automatically detects into readable text with high accuracy.
 
 ## 📚 Table of Contents
 
@@ -17,23 +17,27 @@ A deep learning-based system to detect and decode CAPTCHA images using a CNN mod
 
 ## Overview
 
-This project aims to break CAPTCHA images using a custom-trained neural network model.  
+This deep learning system aims to detect CAPTCHA images using a custom-trained neural network model.  
 It includes preprocessing, training, prediction, and evaluation modules — designed to be simple and modular.
 
 ## Installation
 
-Clone the repository and install the dependencies:
+Clone the repository:
 
 ```bash
 git clone https://github.com/mrro3t/CAPTCHA-Recognition-System.git
-cd CAPTCHA-Recognition-System
 ```
 
-Set up virtual environment in the same folder. Instructions with venv below (use Terminal).
+Set up virtual environment in the same folder. Instructions with venv below (use Windows Terminal):
 
 ```bash
 python -m venv captcha
 captcha\Scripts\activate
+pip install -r requirements.txt
+```
+
+Install all Dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
@@ -49,14 +53,11 @@ Before training, validation, or testing, each image undergoes a simple preproces
 
 Training is optimized for Google Colab using the free-tier GPU. Since the dataset is binary images and lightweight, you can train for higher epochs without hitting resource limits.
 
-Step 2 cell: Dataset Setup
-Upload dataset.zip from the data/ folder to your Google Drive and update the file path accordingly in the notebook.
+Step 2 cell: Dataset Setup. Upload dataset from the `data/dataset.zip` to your Google Drive and update the file path accordingly in the notebook.
 
-Step 9 cell: Adjusting Hyperparameters
-To tweak learning rate, batch size, or number of epochs, modify the relevant variables in Step 9 of the notebook.
+Step 9 cell: Adjusting Hyperparameters. To tweak learning rate, batch size, or number of epochs, modify the relevant variables in Step 9 of the notebook.
 
-Model Output
-Once training is complete, the trained model will be automatically saved to your Google Drive.
+Model Output: Once training is complete, the trained model will be automatically saved to your Google Drive.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrro3t/CAPTCHA-Recognition-System/blob/main/train_on_Colab.ipynb)
 
@@ -64,30 +65,30 @@ Once training is complete, the trained model will be automatically saved to your
 
 This script evaluates the CAPTCHA model using validation images and computes performance metrics at both full CAPTCHA level and per-digit level. The best model is already saved in models folder.
 
-metrics/captcha_metrics.png – Overall accuracy, precision, recall, and F1-score.
+`metrics/captcha_metrics.png` – Overall accuracy, precision, recall, and F1-score.
 
-metrics/per_digit_accuracy.png – Accuracy for each digit position in the 6-digit CAPTCHA.
+`metrics/per_digit_accuracy.png` – Accuracy for each digit position in the 6-digit CAPTCHA.
 
-metrics/individual_digit_accuracy.png – Accuracy for each digit (0–9) across all positions.
+`metrics/individual_digit_accuracy.png` – Accuracy for each digit (0–9) across all positions.
 
-The below command requires no arguments, it runs on data folder. Metrics are stored in metrics folder.
+The below command requires no arguments, it runs on `data/validation-images` and `data/captcha_data.csv`. Metrics are stored in `metrics/`.
 
 ```bash
 python eval.py
 ```
 
-**Overall CAPTCHA Metrics**
+**Overall CAPTCHA Metrics**  
 ![CAPTCHA Metrics](metrics/captcha_metrics.png)
 
-**Per-Digit Accuracy**
+**Per-Digit Accuracy**  
 ![Per-Digit Accuracy](metrics/per_digit_accuracy.png)
 
-**Individual Digit Accuracy (0-9)**
+**Individual Digit Accuracy (0-9)**  
 ![Individual Digit Accuracy](metrics/individual_digit_accuracy.png)
 
 ## Prediction (Locally)
 
-This script predicts the CAPTCHA model using validation images at default. Prediction is directly displayed on Terminal, and .csv file is generated in output folder with image path and predictions for easy visualization. It can be run on both GPU or CPU. Works on limited resource as well. The best model is already saved in models folder.
+This script predicts the CAPTCHA model using validation images at default. Prediction is directly displayed on Terminal, and `output/predictions.csv` file is generated in output folder with image path and predictions for easy visualization. It can be run on both GPU or CPU. Works on limited resource as well. The best model is already saved in `models/captcha_model_best.pth`.
 
 Default :
 ```bash
@@ -109,7 +110,7 @@ python predict.py --model-name "my_model.pth" --subfolder-name "test-images" --o
 
 ## Results
 
-Model : models/captcha_model_best.pth
+Model : `models/captcha_model_best.pth`
 
 ### Metrics
 | Metric              | Value   |
