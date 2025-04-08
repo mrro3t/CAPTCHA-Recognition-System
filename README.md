@@ -10,9 +10,9 @@ A deep learning-based CAPTCHA Recognition system built with convolutional neural
 - [Overview](#overview)
 - [Installation](#installation)
 - [Image Pre-processing](#image-pre-processing)
-- [Model Training (Google Colab Setup)](#model-training)
-- [Evaluation (Locally)](#evaluation)
-- [Prediction (Locally)](#prediction)
+- [Model Training (Google Colab Setup)](#model-training-google-colab-setup)
+- [Evaluation (Locally)](#evaluation-locally)
+- [Prediction (Locally)](#prediction-locally)
 - [Results](#results)
 
 ## Overview
