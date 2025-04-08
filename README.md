@@ -1,25 +1,19 @@
-<p align="center">
-  <img width="800" src="resources/banner.png">
-</p>
-
 # CAPTCHA Recognition System 🔐
 
-[![GitHub stars](https://img.shields.io/github/stars/mrro3t/CAPTCHA-Recognition-System?style=social)](https://github.com/mrro3t/CAPTCHA-Recognition-System/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrro3t/CAPTCHA-Recognition-System/blob/main/train_on_Colab.ipynb)
 
 
 A deep learning-based system to detect and decode CAPTCHA images using a CNN model. A deep learning-based CAPTCHA Recognition system built with convolutional neural networks (CNN).  It automatically detects and decodes CAPTCHA images into readable text with high accuracy.
 
 ## 📚 Table of Contents
 
-- [Overview](#-overview)
-- [Installation](#-installation)
-- [Image Pre-processing](#-image-pre-processing)
-- [Model Training](#-model-training)
-- [Evaluation](#-evaluation)
-- [Prediction](#-prediction)
-- [Results](#-results)
+- [Overview](#overview)
+- [Installation](#installation)
+- [Image Pre-processing](#image-pre-processing)
+- [Model Training](#model-training)
+- [Evaluation](#evaluation)
+- [Prediction](#prediction)
+- [Results](#results)
 
 ## Overview
 

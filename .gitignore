@@ -11,8 +11,6 @@ __pycache__/
 
 # Logs and other output
 *.log
-output/
-metrics/
 
 # Environment and dependency
 .env
