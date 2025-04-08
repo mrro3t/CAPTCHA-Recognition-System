@@ -50,7 +50,7 @@ Before training, validation, or testing, each image undergoes a simple preproces
 
 ## Model Training (Google Colab Setup)
 
-Training is optimized for Google Colab using the free-tier GPU. Since the dataset is binary images and lightweight, you can train for higher epochs without hitting resource limits.
+Training is optimized for Google Colab using the free-tier GPU. Since the dataset is binary images and lightweight, you can train for higher epochs and batch size without hitting resource or time limits.
 
 Step 2 cell: Dataset Setup. Upload dataset from the `data/dataset.zip` to your Google Drive and update the file path accordingly in the notebook.
 
@@ -87,7 +87,7 @@ python eval.py
 
 ## Prediction (Locally)
 
-This script predicts the CAPTCHA model using validation images at default. Prediction is directly displayed on Terminal, and `output/predictions.csv` file is generated in `output/` with image path and predictions for easy visualization. It can be run on both GPU or CPU. Works on limited resource as well. The best model is already saved in `models/captcha_model_best.pth`.
+This script predicts the CAPTCHA model using validation images at default. Prediction is directly displayed on Terminal, and `predictions.csv` file is generated in `output/` with image path and predictions for easy visualization. It can be run on both GPU or CPU. Works on limited resource as well. The best model is already saved in `models/captcha_model_best.pth`.
 
 Default :
 ```bash
