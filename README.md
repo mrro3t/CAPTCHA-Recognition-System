@@ -1,9 +1,9 @@
-# CAPTCHA Recognition System 🔐
+# CAPTCHA Recognition System
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mrro3t/CAPTCHA-Recognition-System/blob/main/train_on_Colab.ipynb)
 
 
-A deep learning-based system to detect CAPTCHA images using a CNN model. A deep learning-based CAPTCHA Recognition system built with convolutional neural networks (CNN).  It automatically detects into readable text with high accuracy.
+A deep learning-based CAPTCHA Recognition system built with convolutional neural networks (CNN).  It automatically detects into readable text with high accuracy.
 
 ## 📚 Table of Contents
 
@@ -33,7 +33,6 @@ Set up virtual environment in the same folder. Instructions with venv below (use
 ```bash
 python -m venv captcha
 captcha\Scripts\activate
-pip install -r requirements.txt
 ```
 
 Install all Dependencies:
@@ -63,7 +62,7 @@ Model Output: Once training is complete, the trained model will be automatically
 
 ## Evaluation (Locally)
 
-This script evaluates the CAPTCHA model using validation images and computes performance metrics at both full CAPTCHA level and per-digit level. The best model is already saved in models folder.
+This script evaluates the CAPTCHA model using validation images and computes performance metrics at both full CAPTCHA level and per-digit level. The best model is already saved in `models/`.
 
 `metrics/captcha_metrics.png` – Overall accuracy, precision, recall, and F1-score.
 
@@ -88,7 +87,7 @@ python eval.py
 
 ## Prediction (Locally)
 
-This script predicts the CAPTCHA model using validation images at default. Prediction is directly displayed on Terminal, and `output/predictions.csv` file is generated in output folder with image path and predictions for easy visualization. It can be run on both GPU or CPU. Works on limited resource as well. The best model is already saved in `models/captcha_model_best.pth`.
+This script predicts the CAPTCHA model using validation images at default. Prediction is directly displayed on Terminal, and `output/predictions.csv` file is generated in `output/` with image path and predictions for easy visualization. It can be run on both GPU or CPU. Works on limited resource as well. The best model is already saved in `models/captcha_model_best.pth`.
 
 Default :
 ```bash
